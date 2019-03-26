@@ -4,6 +4,5 @@
 
 2017 by DKZ
 
-
-all pictures from internet
+all pictures from https://emojipedia.org
 

@@ -18,10 +18,11 @@ def unicodeToString(point):
 def convertUnicodeEmoji():
     files=os.listdir('./emoji_src')
     for file in files:
-        if 'type' not in file and file != '.DS_Store':
+        if 'type' not in file and file != '.DS_Store' and '.png' in file:
+            print(file)
             unicode_name=file.split('_').pop().split('.').pop(0).split('-').pop(0)
             utf8_name=unicodeToString(int(unicode_name,16))
-            print(file,unicode_name,utf8_name)
+            print(unicode_name,utf8_name)
             src_image = Image.open('./emoji_src/'+file);  
             src_image.resize((35,35),Image.ANTIALIAS).save('./emoji_dist/'+utf8_name+'.png')
 
